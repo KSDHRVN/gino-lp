@@ -15,16 +15,16 @@
         .content-auto {
           content-visibility: auto;
         }
-        .bg-vivid-orange {
+        .bg-yellow {
           background-color: #fed715;
         }
-        .text-vivid-orange {
+        .text-yellow {
           color:  #fed715;
         }
-        .bg-razzmatazz {
+        .bg-pink {
           background-color: #ff0768;
         }
-        .bg-cerulean {
+        .bg-blue {
           background-color: #006aad;
         }
         .m-plus-font {
@@ -36,14 +36,33 @@
         .left-35 {
           left: 35%;
         }
+        .shadow-button {
+          box-shadow: 0 4px 0 #000;
+        }
+        .shadow-button-hover {
+          box-shadow: 0 2px 0 #000;
+        }
+        .translate-y-2px {
+          transform: translateY(2px);
+        }
+        .bg-gray {
+          background-color: #e0e0e0;
+        }
+        .youtube-size-embed {
+          width: 560px;
+          height: 315px;
+        }
+        .text-gray {
+          color: #777;
+        }
       }
     </style>
   </head>
   <body class="m-plus-font">
-    <nav class="bg-vivid-orange">
+    <nav class="bg-yellow">
       <div class="mx-auto">
         <div class="flex">
-          <div class="flex w-full">
+          <div class="flex w-full border border-black">
             <h1 class="ml-4 font-semibold text-[28px] items-center basis-1/4 flex">TalentAsiaJobs</h1>
             <!-- Primary Navbar items -->
             <div class="hidden md:flex items-center ml-auto float-right space-y-0">
@@ -88,30 +107,119 @@
         </div>
       </div>
     </nav>
-    <div class="bg-razzmatazz">
+    <div class="bg-pink">
       <div class="text-center pt-8 text-[45px] text-white">
         <span>入社お祝い金</span>
         <span class="text-[65px] font-medium">10万円</span>
         <span>相当支給</span>
-        </br>
+        <br/>
         <span>あなたの応援する就労サポートサービス</span>
       </div>
-      <div class="flex ml-96 my-12">
-        <div class="bg-vivid-orange border border-sky-600 rounded-lg">
+      <div class="flex ml-96 mt-12">
+        <div class="bg-yellow border border-sky-600 rounded-lg">
           <a href="#" class="flex py-6">
             <img class="w-4/6 mx-auto" src="../src/images/logo_talent-asi.png" alt="logo">
           </a>
-          <div class="bg-cerulean text-[16px] text-center text-vivid-orange font-semibold roboto-font">
+          <div class="bg-blue text-[16px] text-center text-yellow font-semibold roboto-font">
             <span class="italic">for</span>
             <span class="text-[20px]">Tokutei</span>
           </div>
         </div>
       </div>
-      <div class="flex h-96">
+      <div class="flex h-56">
         <div class="absolute bottom-0 left-35 top-52">
           <a href="#" class="flex p-4">
-            <img class="w-4/6 mx-auto" src="../src/images/slide-1.png" alt="slide 1">
+            <img class="w-4/6 mx-auto border-b border-black" src="../src/images/slide-1.png" alt="slide 1">
           </a>
+        </div>
+      </div>
+    </div>
+    <div class="bg-pink">
+      <div class="flex">
+        <div class="flex mx-auto p-3">
+          <button class="font-semibold btn bg-yellow text-center border-solid border-2 mr-4 border-black rounded-xl p-4 shadow-button hover:bg-yellow-500 hover:translate-y-2px">
+            <span>Talent Asia Jobsにいますぐ登録</span>
+          </button>
+          <button class="btn bg-white font-semibold border-solid border-2 border-black rounded-xl py-2 px-4 shadow-button hover:translate-y-2px h-16">
+            <img class="h-full w-full object-contain" src="../src/images/facebook-messenger.png" alt="logo">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white text-center">
+      <h3 class="font-semibold mt-20 mb-16 text-[32px]">Sempaiたちからのメッセージ</h3>
+      <div class="bg-gray youtube-size-embed mx-auto table mb-16 rounded-lg">
+        <span class="text-gray table-cell align-middle">YouTube埋め込み</span>
+      </div>
+    </div>
+    <div class="bg-yellow text-center">
+      <h3 class="font-semibold pt-20 pb-16 text-[32px]">最新のお仕事</h3>
+      <div class="grid">
+        <div class="flex flex-row gap-4 mx-auto p-3 text-left text-[12px] justify-center">
+          <a href="#" class="border-solid border-2 border-black shadow-md w-1/4 flex flex-col bg-white rounded-lg border shadow-md shadow-button md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover m-4 h-4/6 w-48" src="../src/images/gray.png" alt="">
+            <div class="flex flex-col pr-2 py-4 h-full">
+              <div class="flex">
+                <span class="bg-blue px-2 text-white py-1 mb-4">介護</span>
+              </div>
+              <div>
+                <span class="font-semibold">仕事内容：</span>
+                <span class="text-gray">介護スタッフは、ご入居者様により充実した生活を送っていただくために、生活の支援全般を行います。身体介助(食事…</span>
+                <br class="block my-1"/>
+                <span class="font-semibold">給料：</span>
+                <span class="text-gray px-2">20万〜25万円</span>
+                <br class="block my-1"/>
+                <span class="font-semibold">勤務地：</span>
+                <span class="text-gray">渋谷</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="border-solid border-2 border-black shadow-md w-1/4 flex flex-col bg-white rounded-lg border shadow-md shadow-button md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover m-4 h-4/6 w-48" src="../src/images/gray.png" alt="">
+            <div class="flex flex-col pr-2 py-4 h-full">
+              <div class="flex">
+                <span class="bg-blue px-2 text-white py-1 mb-4">警備・清掃・ビル管理</span>
+              </div>
+              <div>
+                <span class="font-semibold">仕事内容：</span>
+                <span class="text-gray">有名ホテルでの警備のオシゴト。</span>
+                <br/>
+                <span class="text-gray">具体的には…「エントランス出入口等の警備」をお願いします。…</span>
+                <br class="block my-1"/>
+                <span class="font-semibold">給料：</span>
+                <span class="text-gray">30万円</span>
+                <br class="block my-1"/>
+                <span class="font-semibold">勤務地：</span>
+                <span class="text-gray">品川</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="border-solid border-2 border-black shadow-md w-1/4 flex flex-col bg-white rounded-lg border shadow-md shadow-button md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover m-4 h-4/6 w-48" src="../src/images/gray.png" alt="">
+            <div class="flex flex-col h-full pr-2 py-4">
+              <div class="flex">
+                <span class="bg-blue px-2 text-white py-1 mb-4">介護</span>
+              </div>
+              <div>
+                <span class="font-semibold">仕事内容：</span>
+                <span class="text-gray">介護スタッフは、ご入居者様により充実した生活を送っていただくために、生活の支援全般を行います。身体介助(食事…</span>
+                <br class="block my-1"/>
+                <span class="font-semibold">給料：</span>
+                <span class="text-gray">20万〜25万円</span>
+                <br class="block my-1"/>
+                <span class="font-semibold">勤務地：</span>
+                <span class="text-gray">渋谷</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="flex mx-auto p-3 my-8">
+          <button class="font-semibold btn bg-pink text-center border-solid border-2 mr-4 border-black rounded-xl p-4 shadow-button hover:bg-pink-600 hover:translate-y-2px text-white">
+            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M21 9a1 1 0 0 1 1 1a1 1 0 0 1-1 1h-4.47l-.13 1.21l-2.2 4.94c-.2.5-.73.85-1.34.85H8.5c-.8 0-1.5-.73-1.5-1.5V10c0-.39.16-.74.43-1l4.2-4.9l.77.74c.2.19.32.45.32.74l-.03.22L11 9h10M2 18v-8h3v8H2Z"/></svg>
+            <span>Talent Asia Jobsに登録して、もっとお仕事情報を見る </span>
+          </button>
         </div>
       </div>
     </div>
