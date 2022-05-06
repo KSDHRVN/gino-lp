@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700&family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet"> 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/b943498dde.js" crossorigin="anonymous"></script>
     <style type="text/tailwindcss">
       @layer utilities {
         .content-auto {
@@ -55,6 +56,38 @@
         .text-gray {
           color: #777;
         }
+        .text-pink {
+          color: #ff0768;
+        }
+        .border-pink {
+          --tw-border-opacity: 1;
+          border-color: rgb(255 7 104 / var(--tw-border-opacity))
+        }
+        .fg {
+          content: attr(t);
+        }
+        .mr--5 {
+          margin-right: -5px;
+        }
+        .webkit-appearance {
+          -webkit-appearance: none;
+        }
+        .bg-size-30 {
+          background-size: 30%;
+        }
+        .bg-size-95 {
+          background-size: 95%;
+        }
+        .bg-position-64-95 {
+          background-position-x: 64%;
+          background-position-y: 95%
+        }
+        .pb-100 {
+          padding-bottom: 30rem;
+        }
+        .w--10 {
+          width: 10%
+        }
       }
     </style>
   </head>
@@ -64,59 +97,40 @@
         <div class="flex">
           <div class="flex w-full border border-black">
             <h1 class="ml-4 font-semibold text-[28px] items-center basis-1/4 flex">TalentAsiaJobs</h1>
-            <!-- Primary Navbar items -->
             <div class="hidden md:flex items-center ml-auto float-right space-y-0">
-              <a
-                href=""
-                class="text-[16px] py-4 px-2 font-semibold "
-                >Sempaiたちからのメッセージ</a
-              >
-              <a
-                href=""
-                class="text-[16px] py-4 px-2 font-semibold"
-                >最新のお仕事</a
-              >
-              <a
-                href=""
-                class="text-[16px] py-4 px-2 font-semibold"
-                >お仕事を探すには</a
-              >
-              <a
-                href=""
-                class="text-[16px] py-4 px-2 font-semibold"
-                >３つの特典</a
-              >
-              <a
-                href=""
-                class="text-[16px] py-4 px-2 font-semibold"
-                >Talent Asia Jobs とは？</a
-              >
-              <a
-                href=""
-                class="text-[16px] py-4 px-2 font-semibold"
-                >登録フォーム</a
-              >
+              <a href="" class="text-[16px] py-4 px-2 font-semibold ">Sempaiたちからのメッセージ</a>
+              <a href="" class="text-[16px] py-4 px-2 font-semibold">最新のお仕事</a>
+              <a href="" class="text-[16px] py-4 px-2 font-semibold">お仕事を探すには</a>
+              <a href="" class="text-[16px] py-4 px-2 font-semibold">３つの特典</a>
+              <a href="" class="text-[16px] py-4 px-2 font-semibold">Talent Asia Jobs とは？</a>
+              <a href="" class="text-[16px] py-4 px-2 font-semibold">登録フォーム</a>
             </div>
-            <!-- Website Logo -->
-            <div class="ml-auto order-2">
-              <a href="#" class="float-right border-l border-black flex items-center py-4 px-4 ml-auto order-2">
+            <div class="ml-auto">
+              <a href="#" class="float-right border-x border-black flex items-center p-4 ml-auto">
                 <svg class="h-8 w-8 text-black"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="3.6" y1="9" x2="20.4" y2="9" />  <line x1="3.6" y1="15" x2="20.4" y2="15" />  <path d="M11.5 3a17 17 0 0 0 0 18" />  <path d="M12.5 3a17 17 0 0 1 0 18" /></svg>
               </a>
+            </div>
+            <div class="md:hidden flex items-center">
+              <button class="outline-none mobile-menu-button p-4">
+                <svg class="w-6 h-6 text-black" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </nav>
-    <div class="bg-pink">
-      <div class="text-center pt-8 text-[45px] text-white">
+    <div class="bg-pink bg-no-repeat bg-contain bg-center bg-size-95 md:bg-size-30 pb-100 md:pb-52 bg-position-64-95" style="background-image: url(../src/images/slide-1.png)">
+      <div class="text-center pt-8 md:text-[45px] text-white text-[20px]">
         <span>入社お祝い金</span>
-        <span class="text-[65px] font-medium">10万円</span>
+        <span class="md:text-[65px] text-[35px] font-medium">10万円</span>
         <span>相当支給</span>
         <br/>
         <span>あなたの応援する就労サポートサービス</span>
       </div>
-      <div class="flex ml-96 mt-12">
-        <div class="bg-yellow border border-sky-600 rounded-lg">
+      <div class="flex mt-12">
+        <div class="bg-yellow border border-sky-600 rounded-lg mx-auto md:ml-96">
           <a href="#" class="flex py-6">
             <img class="w-4/6 mx-auto" src="../src/images/logo_talent-asi.png" alt="logo">
           </a>
@@ -126,39 +140,20 @@
           </div>
         </div>
       </div>
-      <div class="flex h-56">
-        <div class="absolute bottom-0 left-35 top-52">
-          <a href="#" class="flex p-4">
-            <img class="w-4/6 mx-auto border-b border-black" src="../src/images/slide-1.png" alt="slide 1">
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="bg-pink">
-      <div class="flex">
-        <div class="flex mx-auto p-3">
-          <button class="font-semibold btn bg-yellow text-center border-solid border-2 mr-4 border-black rounded-xl p-4 shadow-button hover:bg-yellow-500 hover:translate-y-2px">
-            <span>Talent Asia Jobsにいますぐ登録</span>
-          </button>
-          <button class="btn bg-white font-semibold border-solid border-2 border-black rounded-xl py-2 px-4 shadow-button hover:translate-y-2px h-16">
-            <img class="h-full w-full object-contain" src="../src/images/facebook-messenger.png" alt="logo">
-          </button>
-        </div>
-      </div>
     </div>
     <div class="bg-white text-center">
-      <h3 class="font-semibold mt-20 mb-16 text-[32px]">Sempaiたちからのメッセージ</h3>
-      <div class="bg-gray youtube-size-embed mx-auto table mb-16 rounded-lg">
+      <h3 class="font-semibold mt-20 mb-16 text-[32px] px-16">Sempaiたちからのメッセージ</h3>
+      <div class="bg-gray p-36 md:youtube-size-embed mx-auto table mb-16 rounded-lg">
         <span class="text-gray table-cell align-middle">YouTube埋め込み</span>
       </div>
     </div>
-    <div class="bg-yellow text-center">
+    <div class="bg-yellow text-center pb-12 md:pb-auto">
       <h3 class="font-semibold pt-20 pb-16 text-[32px]">最新のお仕事</h3>
       <div class="grid">
-        <div class="flex flex-row gap-4 mx-auto p-3 text-left text-[12px] justify-center">
-          <a href="#" class="border-solid border-2 border-black shadow-md w-1/4 flex flex-col bg-white rounded-lg border shadow-md shadow-button md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+        <div class="md:flex md:flex-row md:gap-4 mx-auto p-3 text-left text-[12px] justify-center">
+          <a href="#" class="md:h-full mb-4 border-solid border-2 border-black shadow-md md:w-1/4 flex bg-white rounded-lg border shadow-md shadow-button hover:shadow-button-hover md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
             <img class="object-cover m-4 h-4/6 w-48" src="../src/images/gray.png" alt="">
-            <div class="flex flex-col pr-2 py-4 h-full">
+            <div class="md:flex md:flex-col pr-2 py-4 h-full">
               <div class="flex">
                 <span class="bg-blue px-2 text-white py-1 mb-4">介護</span>
               </div>
@@ -174,9 +169,9 @@
               </div>
             </div>
           </a>
-          <a href="#" class="border-solid border-2 border-black shadow-md w-1/4 flex flex-col bg-white rounded-lg border shadow-md shadow-button md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <a href="#" class="md:h-full mb-4 border-solid border-2 border-black shadow-md md:w-1/4 flex bg-white rounded-lg border shadow-md shadow-button hover:shadow-button-hover md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
             <img class="object-cover m-4 h-4/6 w-48" src="../src/images/gray.png" alt="">
-            <div class="flex flex-col pr-2 py-4 h-full">
+            <div class="md:flex md:flex-col pr-2 py-4 h-full">
               <div class="flex">
                 <span class="bg-blue px-2 text-white py-1 mb-4">警備・清掃・ビル管理</span>
               </div>
@@ -194,9 +189,9 @@
               </div>
             </div>
           </a>
-          <a href="#" class="border-solid border-2 border-black shadow-md w-1/4 flex flex-col bg-white rounded-lg border shadow-md shadow-button md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <a href="#" class="md:h-full border-solid border-2 border-black shadow-md md:w-1/4 flex bg-white rounded-lg border shadow-md shadow-button hover:shadow-button-hover md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
             <img class="object-cover m-4 h-4/6 w-48" src="../src/images/gray.png" alt="">
-            <div class="flex flex-col h-full pr-2 py-4">
+            <div class="md:flex md:flex-col h-full pr-2 py-4">
               <div class="flex">
                 <span class="bg-blue px-2 text-white py-1 mb-4">介護</span>
               </div>
@@ -214,14 +209,374 @@
           </a>
         </div>
       </div>
-      <div class="flex">
+      <div class="md:flex hidden">
         <div class="flex mx-auto p-3 my-8">
-          <button class="font-semibold btn bg-pink text-center border-solid border-2 mr-4 border-black rounded-xl p-4 shadow-button hover:bg-pink-600 hover:translate-y-2px text-white">
+          <button class="font-semibold btn bg-pink text-center border-solid border-2 mr-4 border-black rounded-xl p-4 shadow-button hover:shadow-button-hover hover:bg-pink-600 hover:translate-y-2px text-white">
             <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M21 9a1 1 0 0 1 1 1a1 1 0 0 1-1 1h-4.47l-.13 1.21l-2.2 4.94c-.2.5-.73.85-1.34.85H8.5c-.8 0-1.5-.73-1.5-1.5V10c0-.39.16-.74.43-1l4.2-4.9l.77.74c.2.19.32.45.32.74l-.03.22L11 9h10M2 18v-8h3v8H2Z"/></svg>
             <span>Talent Asia Jobsに登録して、もっとお仕事情報を見る </span>
           </button>
         </div>
       </div>
     </div>
+    <div class="bg-neutral-100 text-center">
+      <h3 class="font-semibold pt-20 text-[32px]">Talent Asia Jobsを使って</h3>
+      <h3 class="font-semibold pb-20 pb-16 text-[32px]">お仕事を探すには</h3>
+      <div class="grid">
+        <div class="flex flex-col md:flex-row md:gap-4 p-3 text-left text-[14px] md:text-[16px] justify-center mb-16">
+          <div class="md:w--10 w-full">
+            <div class="flex">
+              <span class="bg-black px-2 text-white py-1 rounded-t-lg mx-auto">STEP 1</span>
+            </div>
+            <a href="#" class="md:h-40 border-solid border-2 border-black flex flex-col bg-white rounded-lg md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+              <div class="flex md:flex-col md:h-full w-full">
+                <span class="flex bg-blue text-white p-4 md:px-0 md:py-4 justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+                  </svg>
+                </span>
+                <div class="table md:h-full">
+                  <span class="table-cell align-middle font-semibold text-center my-4 px-3">会員登録</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="md:hidden mx-auto h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="md:block hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+          <div class="md:w--10 w-full">
+            <div class="flex">
+              <span class="bg-black px-2 text-white py-1 rounded-t-lg mx-auto">STEP 2</span>
+            </div>
+            <a href="#" class="md:h-40 border-solid border-2 border-black flex flex-col bg-white rounded-lg md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+              <div class="flex md:flex-col md:h-full w-full">
+                <span class="flex bg-blue text-white p-4 md:px-0 md:py-4 justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                  </svg>
+                </span>
+                <div class="table md:h-full">
+                  <span class="table-cell align-middle font-semibold text-center my-4 px-3">コンサルタントと面談</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="flex items-center ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="md:hidden mx-auto h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="md:block hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+          <div class=" md:w--10 w-full">
+            <div class="flex">
+              <span class="bg-black px-2 text-white py-1 rounded-t-lg mx-auto">STEP 3</span>
+            </div>
+            <a href="#" class="md:h-40 border-solid border-2 border-black flex flex-col bg-white rounded-lg md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+              <div class="flex md:flex-col md:h-full w-full">
+                <span class="flex bg-blue text-white p-4 md:px-0 md:py-4 justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                  </svg>
+                </span>
+                <div class="table md:h-full">
+                  <span class="table-cell align-middle font-semibold text-center my-4 px-3">求人のご紹介</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="flex items-center ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="md:hidden mx-auto h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="md:block hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+          <div class=" md:w--10 w-full">
+            <div class="flex">
+              <span class="bg-black px-2 text-white py-1 rounded-t-lg mx-auto">STEP 4</span>
+            </div>
+            <a href="#" class="md:h-40 border-solid border-2 border-black flex flex-col bg-white rounded-lg md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+              <div class="flex md:flex-col md:h-full w-full">
+                <span class="flex bg-blue text-white p-4 md:px-0 md:py-4 justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                <div class="table md:h-full">
+                  <span class="table-cell align-middle font-semibold text-center my-4 px-3">応募</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="flex items-center ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="md:hidden mx-auto h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="md:block hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+          <div class=" md:w--10 w-full">
+            <div class="flex">
+              <span class="bg-black px-2 text-white py-1 rounded-t-lg mx-auto">STEP 5</span>
+            </div>
+            <a href="#" class="md:h-40 border-solid border-2 border-black flex flex-col bg-white rounded-lg md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+              <div class="flex md:flex-col md:h-full w-full">
+                <span class="flex bg-blue text-white p-4 md:px-0 md:py-4 justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </span>
+                <div class="table md:h-full">
+                  <span class="table-cell align-middle font-semibold text-center my-4 px-3">企業面接</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="flex items-center ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="md:hidden mx-auto h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="md:block hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+          <div class=" md:w--10 w-full">
+            <div class="flex">
+              <span class="bg-black px-2 text-white py-1 rounded-t-lg mx-auto">STEP 6</span>
+            </div>
+            <a href="#" class="md:h-40 border-solid border-2 border-black flex flex-col bg-white rounded-lg md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+              <div class="flex md:flex-col md:h-full w-full">
+                <span class="flex bg-blue text-white p-4 md:px-0 md:py-4 justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
+                  </svg>
+                </span>
+                <div class="table md:h-full">
+                  <span class="table-cell align-middle font-semibold text-center my-4 px-3">内定</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-yellow text-center">
+      <h3 class="font-semibold pt-20 text-[32px]">会員登録者へ</h3>
+      <h3 class="font-semibold pb-20 pb-16 text-[32px]">３つの特典</h3>
+      <div class="grid">
+        <div class="md:flex md:flex-row md:gap-4 p-3 text-left text-[14px] md:text-[16px] justify-center mb-16">
+          <div class="md:w-1/4 w-full">
+            <a href="#" class="mb-4 md:h-full border-solid border-2 border-pink flex flex-col bg-white rounded-lg md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 items-center">
+              <div class="flex flex-col px-2 py-4 h-full w-full text-center">
+                <div class="flex">
+                  <span class="bg-pink px-2 text-white py-1 mb-4 rounded-lg w-full">特典①</span>
+                </div>
+                <div class="md:h-full table">
+                  <div class="table-cell align-middle">
+                    <span class="font-semibold">入社お祝い金</span>
+                    <br/>
+                    <span class="font-semibold text-pink">10万円</span>
+                    <br/>
+                    <span class="font-semibold">もらえる！</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="md:w-1/4 w-full">
+            <a href="#" class="mb-4 md:h-full border-solid border-2 border-pink flex flex-col bg-white rounded-lg md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+              <div class="flex flex-col px-2 py-4 h-full w-full text-center">
+                <div class="flex">
+                  <span class="bg-pink px-2 text-white py-1 mb-4 rounded-lg w-full">特典②</span>
+                </div>
+                <div class="md:h-full table">
+                  <div class="table-cell align-middle">
+                    <span class="font-semibold">紹介してくれた人が</span>
+                    <br/>
+                    <span class="font-semibold">登録してくれたら</span>
+                    <br/>
+                    <span class="font-semibold text-pink">3万円</span>
+                    <span class="font-semibold ">もらえる！</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="md:w-1/4 w-full">
+            <a href="#" class="md:h-full border-solid border-2 border-pink flex flex-col bg-white rounded-lg md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+              <div class="flex flex-col px-2 py-4 h-full w-full text-center">
+                <div class="flex">
+                  <span class="bg-pink px-2 text-white py-1 mb-4 rounded-lg w-full">特典③</span>
+                </div>
+                <div class="md:h-full table">
+                  <span class="font-semibold table-cell align-middle">非公開求人の閲覧可能</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-blue text-center">
+      <h3 class="font-semibold pt-20 pb-8 text-[32px] text-white">Talent Asia Jobsとは？</h3>
+      <div class="text-white text-[14px] md:text-[16px] pb-8"> 
+        <span>日本で長く働きたい外国人のあなたに</span>
+        <br/>
+        <span>優良な日本企業をご紹介する</span>
+        <br/>
+        <span>外国人総合支援サービスです。</span>
+      </div>
+      <div class="grid">
+        <div class="md:flex md:flex-row gap-4 p-3 text-left text-[14px] md:text-[16px] justify-center mb-16">
+          <div class="md:w-1/4 w-full">
+            <a href="#" class="mb-4 md:h-full flex flex-col bg-yellow rounded-lg md:flex-row md:max-w-xl">
+              <div class="flex md:flex-col md:p-8 h-full w-full md:text-center items-center">
+                <div class="flex">
+                  <span class="text-pink py-4 px-2 text-white md:py-1 md:mb-4 rounded-lg md:w-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-pink h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="md:pb-4">
+                  <span t="こうたいぐうきゅうじんたすう" class="font-medium inline-block text-center leading-none before:block before:fg before:text-[50%] before:text-left leading-tight">好待遇求人多数</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="md:w-1/4 w-full">
+            <a href="#" class="mb-4 md:h-full flex flex-col bg-yellow rounded-lg md:flex-row md:max-w-xl">
+              <div class="flex md:flex-col md:p-8 h-full w-full md:text-center items-center">
+                <div class="flex">
+                  <span class="text-pink py-4 px-2 text-white md:py-1 md:mb-4 rounded-lg md:w-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-pink h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="md:pb-4">
+                  <span t="しょうかいりょう" class="mb-1 font-medium inline-block text-center leading-none before:block before:fg before:text-[50%] before:text-left leading-tight tracking-[.5em] before:tracking-normal">紹介料</span>
+                  <span class="font-medium mr--5">、</span>
+                  <span t="とうろくりょう" class="font-medium inline-block text-center leading-none before:block before:fg before:text-[50%] before:text-left leading-tight tracking-[.25em] before:tracking-normal">登録料</span>
+                  <span class="font-medium mr--5">一切なし</span>
+                  <span t="かんぜんむりょう" class="font-medium inline-block text-center leading-none before:block before:fg before:text-[50%] before:text-left leading-tight">完全無料</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="md:w-1/4 w-full">
+            <a href="#" class="md:h-full flex flex-col bg-yellow rounded-lg md:flex-row md:max-w-xl">
+              <div class="flex md:flex-col md:p-8 h-full w-full md:text-center items-center">
+                <div class="flex">
+                  <span class="text-pink py-4 px-2 text-white md:py-1 md:mb-4 rounded-lg md:w-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-pink h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="md:pb-4">
+                  <span t="ろううどうかいし" class="mr--5 font-medium inline-block text-center leading-none before:block before:fg before:text-[50%] before:text-left leading-tight">就労開始</span>
+                  <span class="font-medium mr--5">まで</span>
+                  <span t="てってい" class="font-medium inline-block text-center leading-none before:block before:fg before:text-[50%] before:text-left leading-tight">徹底サポート</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-yellow text-center pb-8">
+      <h3 class="font-semibold pt-20 pb-8 text-[32px] text-black">登録フォーム</h3>
+      <div class="text-black font-medium text-[14px] md:text-[16px] pb-8"> 
+        <span>Talent Asia Jobs への登録は、こちらから！</span>
+      </div>
+      <form class="md:w-full max-w-3xl rounded-lg border-solid border-2 border-black bg-white mx-4 md:mx-auto p-4 md:p-12 text-[14px] md:text-[16px]">
+        <div class="md:flex md:items-center mb-6">
+          <div class="md:w-3/12">
+            <label class="block text-black md:font-bold text-left mb-1 md:mb-0 pr-4" for="inline-full-name">
+              お名前
+            </label>
+          </div>
+          <div class="md:w-2/3">
+            <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" id="inline-full-name" type="text">
+          </div>
+        </div>
+        <div class="md:flex md:items-center mb-6">
+          <div class="md:w-3/12">
+            <label class="block text-black md:font-bold text-left mb-1 md:mb-0 pr-4" for="inline-phone-number">
+              お電話番号
+            </label>
+          </div>
+          <div class="md:w-2/3">
+            <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" id="inline-phone-number" type="text">
+          </div>
+        </div>
+        <div class="md:flex md:items-center mb-6">
+          <div class="md:w-3/12">
+            <label class="block text-black md:font-bold text-left mb-1 md:mb-0 pr-4" for="inline-address">
+              ご住所
+            </label>
+          </div>
+          <div class="md:w-2/3">
+            <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" id="inline-address" type="text">
+          </div>
+        </div>
+        <div class="md:flex md:items-center mb-6">
+          <div class="md:w-3/12">
+            <label class="block text-black md:font-bold text-left mb-1 md:mb-0 pr-4" for="inline-mail">
+              メールアドレス
+            </label>
+          </div>
+          <div class="md:w-2/3">
+            <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" id="inline-mail" type="email">
+          </div>
+        </div>
+        <div class="md:flex md:items-center mb-6">
+          <div class="md:w-3/12">
+            <label class="block text-black md:font-bold text-left mb-1 md:mb-0 pr-4" for="inline-state">
+              在留資格
+            </label>
+          </div>
+          <div class="md:w-2/3">
+            <select id="inline-state" style="background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+);" class="webkit-appearance bg-right bg-no-repeat bg-gray-200 border-2 border-gray-200 rounded-lg focus:ring-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <option>選択してください</option>
+            </select>
+          </div>
+        </div>
+        <div class="md:flex md:items-center">
+          <div class="md:flex mx-auto px-4 mt-8">
+            <button class="font-semibold btn bg-pink text-center border-solid border-2 mr-4 border-black rounded-xl p-4 shadow-button hover:shadow-button-hover hover:bg-pink-600 hover:translate-y-2px text-white">
+              <span class="p-8">登録する</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="h-44">
+      <div class="bg-blue text-center py-8 text-[14px] md:text-[16px]">
+        <span class="text-white mx-4">Copyright © 2020 KOSAIDO BUSINESS SUPPORT CO., LTD. All Rights Reserved</span>
+      </div>
+    </div>
+    <div class="bg-pink z-1 fixed inset-x-0 bottom-0">
+      <div class="flex">
+        <div class="flex mx-auto p-3">
+          <button class="font-semibold btn bg-yellow text-center border-solid border-2 mr-4 border-black rounded-xl p-4 shadow-button hover:shadow-button-hover hover:bg-yellow-500 hover:translate-y-2px">
+            <span>Talent Asia Jobsにいますぐ登録</span>
+          </button>
+          <button class="btn bg-white font-semibold border-solid border-2 border-black rounded-xl py-2 px-4 shadow-button hover:shadow-button-hover hover:translate-y-2px h-16">
+            <img class="h-full w-full object-contain" src="../src/images/facebook-messenger.png" alt="logo">
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
+  
 </html>
