@@ -55,6 +55,16 @@
           }
         }
       }
+      let id, pass
+      while (id != "admin" && pass != "password") {
+        id = prompt("Please enter your name", "admin");
+        pass = prompt("Please enter password");
+        if ((id == "admin") && (pass == "password")) {
+          alert("Logged in successfully");
+        } else {
+          alert("Login failed");
+        }
+      }
     </script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> 
 		<style>
