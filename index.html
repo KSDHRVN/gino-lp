@@ -56,12 +56,6 @@
           }
         }
       }
-      let loop = true;
-      while (loop) {
-        username = prompt('Please enter your name');
-        password = prompt('Please enter your password');
-        if (username === 'admin' && password === 'password') loop = false;
-      }
     </script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> 
 		<style>
@@ -103,12 +97,12 @@
           <div class="flex w-full border border-black">
             <h1 class="ml-4 font-semibold text-[22px] items-center basis-1/5 flex">TalentAsiaJobs</h1>
             <div class="hidden md:flex sm:hidden items-center ml-auto float-right space-y-0 text-[14px] md:text-[16px] ">
-              <a href="" class="text-[16px] py-4 px-2 font-semibold ">Sempaiたちからのメッセージ</a>
-              <a href="" class="text-[16px] py-4 px-2 font-semibold">最新のお仕事</a>
-              <a href="" class="text-[16px] py-4 px-2 font-semibold">お仕事を探すには</a>
-              <a href="" class="text-[16px] py-4 px-2 font-semibold">３つの特典</a>
-              <a href="" class="text-[16px] py-4 px-2 font-semibold">Talent Asia Jobs とは？</a>
-              <a href="" class="text-[16px] py-4 px-2 font-semibold">登録フォーム</a>
+              <a href="#messages" class="text-[16px] py-4 px-2 font-semibold ">Sempaiたちからのメッセージ</a>
+              <a href="#jobs" class="text-[16px] py-4 px-2 font-semibold">最新のお仕事</a>
+              <a href="#how-to-find-jobs" class="text-[16px] py-4 px-2 font-semibold">お仕事を探すには</a>
+              <a href="#benefits" class="text-[16px] py-4 px-2 font-semibold">３つの特典</a>
+              <a href="#about-us" class="text-[16px] py-4 px-2 font-semibold">Talent Asia Jobs とは？</a>
+              <a href="#signup-form" class="text-[16px] py-4 px-2 font-semibold">登録フォーム</a>
             </div>
             <div class="ml-auto table">
               <a href="#" class="table-cell align-middle md:float-none float-right border-x border-black flex items-center p-4 ml-auto">
@@ -229,13 +223,13 @@
         <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-white bg-transparent leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
       </div>
     </div>
-    <div class="bg-white text-center">
+    <div id="messages" class="bg-white text-center">
       <h3 class="font-semibold mt-20 mb-16 text-[32px] px-16">Sempaiたちからのメッセージ</h3>
       <div class="block bg-gray88 md:w-35 md:h-78 p-20 sm:mx-auto mx-4 md:table mb-16 rounded-lg">
         <span class="text-gray md:table-cell md:align-middle">YouTube埋め込み</span>
       </div>
     </div>
-    <div class="bg-yellow text-center pb-12 md:pb-auto">
+    <div id="jobs" class="bg-yellow text-center pb-12 md:pb-auto">
       <h3 class="font-semibold pt-20 pb-16 text-[32px]">最新のお仕事</h3>
       <div class="grid">
         <div class="lg:flex lg:flex-row md:gap-4 mx-auto p-3 text-left text-[12px] justify-center">
@@ -306,7 +300,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-neutral-100 text-center">
+    <div id="how-to-find-jobs" class="bg-neutral-100 text-center">
       <h3 class="font-semibold pt-20 text-[32px]">Talent Asia Jobsを使って</h3>
       <h3 class="font-semibold pb-20 pb-16 text-[32px]">お仕事を探すには</h3>
       <div class="grid">
@@ -456,7 +450,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-yellow text-center">
+    <div id="benefits" class="bg-yellow text-center">
       <h3 class="font-semibold pt-20 text-[32px]">会員登録者へ</h3>
       <h3 class="font-semibold pb-20 pb-16 text-[32px]">３つの特典</h3>
       <div class="grid">
@@ -513,7 +507,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-blue text-center">
+    <div id="about-us" class="bg-blue text-center">
       <h3 class="font-semibold pt-20 pb-8 text-[32px] text-white">Talent Asia Jobsとは？</h3>
       <div class="text-white text-[14px] md:text-[16px] pb-8"> 
         <span>日本で長く働きたい外国人のあなたに</span>
