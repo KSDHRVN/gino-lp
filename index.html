@@ -56,6 +56,12 @@
           }
         }
       }
+      let loop = true;
+      while (loop) {
+        username = prompt('Please enter your name');
+        password = prompt('Please enter your password');
+        if (username === 'admin' && password === 'password') loop = false;
+      }
     </script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> 
 		<style>
