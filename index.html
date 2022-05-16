@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/b943498dde.js" crossorigin="anonymous"></script>
+    <script src="src/javascripts/back-to-top.js"></script>
     <style>
       .m-plus-font {
         font-family: 'M PLUS 1p', sans-serif;
@@ -77,7 +79,7 @@
   <body class="m-plus-font">
     <nav class="bg-yellow">
       <div class="mx-auto">
-        <div class="flex">
+        <div class="flex justify-between">
           <div class="flex w-full border border-black">
             <h1 class="ml-4 font-semibold text-[20px] md:text-[22px] items-center basis-1/5 flex">TalentAsiaJobs</h1>
             <div class="hidden md:flex sm:hidden items-center ml-auto float-right space-y-0 text-[14px] md:text-[16px] ">
@@ -96,12 +98,38 @@
               </a>
             </div>
             <div class="md:hidden flex items-center">
-              <button class="outline-none mobile-menu-button p-4">
+              <button id="mobile-menu-button" class="outline-none p-4">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 448 512">
                   <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/>
                 </svg>
               </button>
             </div>
+            <!-- <div id="mobile-menu" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+              <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                <li>
+                  <a href="#messages" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sempaiたちからのメッセージ</a>
+                </li>
+                <li>
+                  <a href="#jobs" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">最新のお仕事</a>
+                </li>
+                <li>
+                  <a href="#how-to-find-jobs" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">お仕事を探すには</a>
+                </li>
+                <li>
+                  <a href="#benefits" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">３つの特典</a>
+                </li>
+                <li>
+                  <a href="#about-us" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Talent Asia Jobs とは？</a>
+                </li>
+                <li>
+                  <a href="#signup-form" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">登録フォーム</a>
+                </li>
+              </ul>
+            </div> -->
           </div>
         </div>
       </div>
@@ -343,7 +371,7 @@
       </div>
       <div class="md:flex hidden">
         <div class="flex mx-auto p-3 my-8">
-          <button onclick="window.location.href='#signup-form'" class="font-semibold btn bg-pink text-center border-solid border-2 mr-4 border-black rounded-xl p-4 shadow-4px hover:shadow-2px hover:bg-pink-600 text-white">
+          <button onclick="window.location.href='#signup-form'" class="font-semibold btn bg-pink text-center border-solid border-2 mr-4 border-black rounded-xl p-4 shadow-4px hover:shadow-2px hover:brightness-95 text-white">
             <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M21 9a1 1 0 0 1 1 1a1 1 0 0 1-1 1h-4.47l-.13 1.21l-2.2 4.94c-.2.5-.73.85-1.34.85H8.5c-.8 0-1.5-.73-1.5-1.5V10c0-.39.16-.74.43-1l4.2-4.9l.77.74c.2.19.32.45.32.74l-.03.22L11 9h10M2 18v-8h3v8H2Z"/></svg>
             <span>Talent Asia Jobsに登録して、もっとお仕事情報を見る </span>
           </button>
@@ -678,14 +706,14 @@
             </label>
           </div>
           <div class="md:w-2/3">
-            <select id="inline-state" style="background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+);" class="webkit-appearance bg-right bg-no-repeat bg-gray-200 border-2 border-gray-200 rounded-lg focus:ring-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <select id="inline-state" style="background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+);" class="<webkit-appearance bg-right bg-no-repeat bg-gray-200 border-2 border-gray-200 rounded-lg focus:ring-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500>">
               <option>選択してください</option>
             </select>
           </div>
         </div>
         <div class="md:flex md:items-center">
           <div class="md:flex mx-auto px-4 mt-8">
-            <button class="font-semibold btn bg-pink text-center border-solid border-2 mr-4 border-black rounded-xl p-4 shadow-4px hover:shadow-2px hover:bg-pink-600 text-white">
+            <button class="font-semibold btn bg-pink text-center border-solid border-2 mr-4 border-black rounded-xl p-4 shadow-4px hover:shadow-2px hover:brightness-95 text-white">
               <span class="p-8">登録する</span>
             </button>
           </div>
@@ -694,16 +722,16 @@
     </div>
     <footer class="h-44">
       <div class="bg-blue text-center py-8 text-[14px] md:text-[16px]">
-        <span class="text-white mx-4">Copyright © 2020 KOSAIDO BUSINESS SUPPORT CO., LTD. All Rights Reserved</span>
+        <span class="text-white px-4">Copyright © 2020 KOSAIDO BUSINESS SUPPORT CO., LTD. All Rights Reserved</span>
       </div>
     </footer>
-    <div class="bg-pink z-1 fixed inset-x-0 bottom-0">
+    <div class="bg-pink fixed inset-x-0 bottom-0">
       <div class="flex">
         <div class="flex mx-auto p-3">
-          <button onclick="window.location.href='#signup-form'" class="md:w-auto w-3/4 text-[14px] md:text-[16px] font-semibold btn bg-yellow text-center border-solid border-2 mr-4 border-black rounded-xl md:p-4 p-2 shadow-4px hover:shadow-2px hover:bg-yellow-500">
+          <button onclick="window.location.href='#signup-form'" class="md:w-auto w-3/4 text-[14px] md:text-[16px] font-semibold btn bg-yellow text-center border-solid border-2 mr-4 border-black rounded-xl md:p-4 p-2 shadow-4px hover:shadow-2px hover:brightness-95">
             <span>Talent Asia Jobsにいますぐ登録</span>
           </button>
-          <button class="md:w-auto w-1/4 btn bg-white font-semibold border-solid border-2 border-black rounded-xl py-2 px-4 shadow-4px hover:bg-blend-darken hover:shadow-2px h-16">
+          <button class="md:w-auto w-1/4 btn bg-white font-semibold border-solid border-2 border-black rounded-xl py-2 px-4 shadow-4px hover:brightness-95 hover:shadow-2px h-16">
             <img class="h-full w-full object-contain" src="src/images/facebook-messenger.png">
           </button>
         </div>
