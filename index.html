@@ -16,6 +16,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/b943498dde.js" crossorigin="anonymous"></script>
     <script src="src/javascripts/back-to-top.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css" />
     <style>
       .m-plus-font {
         font-family: 'M PLUS 1p', sans-serif;
@@ -25,6 +26,12 @@
       }
       .webkit-appearance {
         -webkit-appearance: none;
+      }
+      button[aria-expanded="true"] svg#open-ico {
+        display: none;
+      }
+      button[aria-expanded="true"] svg#close-ico {
+        display: block;
       }
     </style>
     <script>
@@ -68,68 +75,72 @@
           },
         }
       }
-      let loop = true;
-      while (loop) {
-        username = prompt('Please enter your name');
-        password = prompt('Please enter your password');
-        if (username === 'admin' && password === 'password') loop = false;
-      }
     </script>
   </head>
   <body class="m-plus-font">
     <nav class="bg-yellow">
       <div class="mx-auto">
-        <div class="flex justify-between">
-          <div class="flex w-full border border-black">
-            <h1 class="ml-4 font-semibold text-[20px] md:text-[22px] items-center basis-1/5 flex">TalentAsiaJobs</h1>
-            <div class="hidden md:flex sm:hidden items-center ml-auto float-right space-y-0 text-[14px] md:text-[16px] ">
-              <a href="#messages" class="text-[16px] py-4 px-2 font-semibold ">Sempaiたちからのメッセージ</a>
-              <a href="#jobs" class="text-[16px] py-4 px-2 font-semibold">最新のお仕事</a>
-              <a href="#how-to-find-jobs" class="text-[16px] py-4 px-2 font-semibold">お仕事を探すには</a>
-              <a href="#benefits" class="text-[16px] py-4 px-2 font-semibold">３つの特典</a>
-              <a href="#about-us" class="text-[16px] py-4 px-2 font-semibold">Talent Asia Jobs とは？</a>
-              <a href="#signup-form" class="text-[16px] py-4 px-2 font-semibold">登録フォーム</a>
-            </div>
-            <div class="ml-auto table">
-              <a href="#" class="table-cell align-middle md:float-none float-right border-x border-black flex items-center p-4 ml-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-7 md:w-7" viewBox="0 0 512 512">
-                  <path d="M352 256C352 278.2 350.8 299.6 348.7 320H163.3C161.2 299.6 159.1 278.2 159.1 256C159.1 233.8 161.2 212.4 163.3 192H348.7C350.8 212.4 352 233.8 352 256zM503.9 192C509.2 212.5 512 233.9 512 256C512 278.1 509.2 299.5 503.9 320H380.8C382.9 299.4 384 277.1 384 256C384 234 382.9 212.6 380.8 192H503.9zM493.4 160H376.7C366.7 96.14 346.9 42.62 321.4 8.442C399.8 29.09 463.4 85.94 493.4 160zM344.3 160H167.7C173.8 123.6 183.2 91.38 194.7 65.35C205.2 41.74 216.9 24.61 228.2 13.81C239.4 3.178 248.7 0 256 0C263.3 0 272.6 3.178 283.8 13.81C295.1 24.61 306.8 41.74 317.3 65.35C328.8 91.38 338.2 123.6 344.3 160H344.3zM18.61 160C48.59 85.94 112.2 29.09 190.6 8.442C165.1 42.62 145.3 96.14 135.3 160H18.61zM131.2 192C129.1 212.6 127.1 234 127.1 256C127.1 277.1 129.1 299.4 131.2 320H8.065C2.8 299.5 0 278.1 0 256C0 233.9 2.8 212.5 8.065 192H131.2zM194.7 446.6C183.2 420.6 173.8 388.4 167.7 352H344.3C338.2 388.4 328.8 420.6 317.3 446.6C306.8 470.3 295.1 487.4 283.8 498.2C272.6 508.8 263.3 512 255.1 512C248.7 512 239.4 508.8 228.2 498.2C216.9 487.4 205.2 470.3 194.7 446.6H194.7zM190.6 503.6C112.2 482.9 48.59 426.1 18.61 352H135.3C145.3 415.9 165.1 469.4 190.6 503.6V503.6zM321.4 503.6C346.9 469.4 366.7 415.9 376.7 352H493.4C463.4 426.1 399.8 482.9 321.4 503.6V503.6z"/>
-                </svg>
-              </a>
-            </div>
-            <div class="md:hidden flex items-center">
-              <button id="mobile-menu-button" class="outline-none p-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 448 512">
+        <div class="flex justify-between items-center ">
+          <div class="flex w-full flex-wrap md:flex-nowrap border-b border-black">
+            <a href="#" class="mx-4 items-center basis-1/5 flex">
+              <h1 class="font-semibold text-[20px] md:text-[22px]">TalentAsiaJobs</h1>
+            </a>
+            <div class="flex items-center md:order-2 ml-auto">
+              <div class="ml-auto table">
+                <a href="#" class="table-cell align-middle md:float-none float-right border-l border-black flex items-center p-4 ml-auto">
+                  <button type="button" class="flex text-sm bg-gray-800 rounded-full md:mr-0" id="lang-menu-button" aria-expanded="false" type="button" data-dropdown-toggle="dropdown">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-7 md:w-7" viewBox="0 0 512 512">
+                      <path d="M352 256C352 278.2 350.8 299.6 348.7 320H163.3C161.2 299.6 159.1 278.2 159.1 256C159.1 233.8 161.2 212.4 163.3 192H348.7C350.8 212.4 352 233.8 352 256zM503.9 192C509.2 212.5 512 233.9 512 256C512 278.1 509.2 299.5 503.9 320H380.8C382.9 299.4 384 277.1 384 256C384 234 382.9 212.6 380.8 192H503.9zM493.4 160H376.7C366.7 96.14 346.9 42.62 321.4 8.442C399.8 29.09 463.4 85.94 493.4 160zM344.3 160H167.7C173.8 123.6 183.2 91.38 194.7 65.35C205.2 41.74 216.9 24.61 228.2 13.81C239.4 3.178 248.7 0 256 0C263.3 0 272.6 3.178 283.8 13.81C295.1 24.61 306.8 41.74 317.3 65.35C328.8 91.38 338.2 123.6 344.3 160H344.3zM18.61 160C48.59 85.94 112.2 29.09 190.6 8.442C165.1 42.62 145.3 96.14 135.3 160H18.61zM131.2 192C129.1 212.6 127.1 234 127.1 256C127.1 277.1 129.1 299.4 131.2 320H8.065C2.8 299.5 0 278.1 0 256C0 233.9 2.8 212.5 8.065 192H131.2zM194.7 446.6C183.2 420.6 173.8 388.4 167.7 352H344.3C338.2 388.4 328.8 420.6 317.3 446.6C306.8 470.3 295.1 487.4 283.8 498.2C272.6 508.8 263.3 512 255.1 512C248.7 512 239.4 508.8 228.2 498.2C216.9 487.4 205.2 470.3 194.7 446.6H194.7zM190.6 503.6C112.2 482.9 48.59 426.1 18.61 352H135.3C145.3 415.9 165.1 469.4 190.6 503.6V503.6zM321.4 503.6C346.9 469.4 366.7 415.9 376.7 352H493.4C463.4 426.1 399.8 482.9 321.4 503.6V503.6z"/>
+                    </svg>        
+                  </button>
+                </a>
+              </div>
+              <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow" id="dropdown">
+                <ul class="py-1" aria-labelledby="dropdown">
+                  <li>
+                    <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">日本</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">English</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Tiếng Việt</a>
+                  </li>
+                </ul>
+              </div>
+              <button data-collapse-toggle="mobile-menu-2" type="button" class="border-l border-black inline-flex p-4 text-gray-500 md:hidden" aria-controls="mobile-menu-2" aria-expanded="false">
+                <svg id="open-ico" xmlns="http://www.w3.org/2000/svg" class="display w-5 h-5" viewBox="0 0 448 512">
                   <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/>
+                </svg>
+                <svg id="close-ico" xmlns="http://www.w3.org/2000/svg" class="hidden w-5 h-5" viewBox="0 0 448 512">
+                  <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/>
                 </svg>
               </button>
             </div>
-            <!-- <div id="mobile-menu" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-              <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                <li>
-                  <a href="#messages" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sempaiたちからのメッセージ</a>
-                </li>
-                <li>
-                  <a href="#jobs" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">最新のお仕事</a>
-                </li>
-                <li>
-                  <a href="#how-to-find-jobs" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">お仕事を探すには</a>
-                </li>
-                <li>
-                  <a href="#benefits" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">３つの特典</a>
-                </li>
-                <li>
-                  <a href="#about-us" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Talent Asia Jobs とは？</a>
-                </li>
-                <li>
-                  <a href="#signup-form" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">登録フォーム</a>
-                </li>
-              </ul>
-            </div> -->
+            <div class="md:border-0 border-t border-black w-full flex">
+              <div class="hidden md:flex ml-auto space-y-0 text-[14px] md:text-[16px] mx-auto" id="mobile-menu-2">
+                <ul class="flex md:items-center flex-col md:mt-4 md:flex-row md:space-x-6 md:mt-0 md:font-medium mr-2 leading-[3rem] md:leading-none text-center py-20 md:py-0">
+                  <li>
+                    <a href="#messages" class="text-[16px] font-semibold">Sempaiたちからのメッセージ</a>
+                  </li>
+                  <li>
+                    <a href="#jobs" class="text-[16px] font-semibold">最新のお仕事</a>
+                  </li>
+                  <li>
+                    <a href="#how-to-find-jobs" class="text-[16px] font-semibold">お仕事を探すには</a>
+                  </li>
+                  <li>
+                    <a href="#benefits" class="text-[16px] font-semibold">３つの特典</a>
+                  </li>
+                  <li>
+                    <a href="#about-us" class="text-[16px] font-semibold">Talent Asia Jobs とは？</a>
+                  </li>
+                  <li>
+                    <a href="#signup-form" class="text-[16px] font-semibold">登録フォーム</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -706,7 +717,7 @@
             </label>
           </div>
           <div class="md:w-2/3">
-            <select id="inline-state" style="background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+);" class="<webkit-appearance bg-right bg-no-repeat bg-gray-200 border-2 border-gray-200 rounded-lg focus:ring-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500>">
+            <select id="inline-state" style="background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+);" class="webkit-appearance bg-right bg-no-repeat bg-gray-200 border-2 border-gray-200 rounded-lg focus:ring-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500>">
               <option>選択してください</option>
             </select>
           </div>
@@ -738,5 +749,6 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script>
   </body>
 </html>
