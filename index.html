@@ -75,12 +75,6 @@
           },
         }
       }
-      let loop = true;
-      while (loop) {
-        username = prompt('Please enter your name');
-        password = prompt('Please enter your password');
-        if (username === 'admin' && password === 'password') loop = false;
-      }
     </script>
   </head>
   <body class="m-plus-font">
@@ -790,12 +784,12 @@
         </div>
         <div class="md:flex md:items-center mb-6">
           <div class="md:w-3/12">
-            <label class="block text-black text-left mb-1 md:mb-0 pr-4" for="preparing">
+            <label class="block text-black text-left mb-1 md:mb-0 pr-4" for="status-of-residence">
               在留資格
             </label>
           </div>
           <div class="md:w-2/3">
-            <select id="preparing" name="preparing" style="background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+);" class="webkit-appearance bg-right bg-no-repeat bg-gray-200 border-2 border-gray-200 rounded focus:border-transparent block w-full p-2.5">
+            <select id="status-of-residence" name="status-of-residence" style="background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+);" class="webkit-appearance bg-right bg-no-repeat bg-gray-200 border-2 border-gray-200 rounded focus:border-transparent block w-full p-2.5">
               <option>選択してください</option>
               <option value="Option.U_010679">留学</option>
               <option value="Option.U_010680">技能実習1号</option>
