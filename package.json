@@ -1,0 +1,27 @@
+{
+  "name": "gino-lp",
+  "version": "1.0.0",
+  "description": "gino-lp",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KSDHRVN/gino-lp.git"
+  },
+  "keywords": [
+    "gino-lp"
+  ],
+  "author": "Kosaido",
+  "bugs": {
+    "url": "https://github.com/KSDHRVN/gino-lp/issues"
+  },
+  "homepage": "https://github.com/KSDHRVN/gino-lp#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.4"
+  },
+  "dependencies": {
+    "tw-components": "^1.0.8"
+  }
+}
